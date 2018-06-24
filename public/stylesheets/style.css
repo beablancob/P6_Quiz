@@ -1,0 +1,137 @@
+
+body {
+    font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+#page {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 2px auto;
+    padding: 0px;
+}
+
+.main {
+    flex: 1 100%;
+    border: 1px solid #999;
+    padding: 2px;
+    margin: 1px;
+    background: #eee;
+}
+
+#mainHeader, #mainNav, #mainFooter {
+    text-align: center;
+}
+
+#mainHeader h1 {
+    margin: 8px;
+}
+
+#mainNav a {
+    margin: 0px 5px;
+}
+
+#mainSection {
+    padding: 20px;
+    text-align: left;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.wideRow {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: stretch;
+}
+
+.wideRow .itemNarrow {
+    flex: 0 auto;
+    margin: 0px 5px;
+}
+
+.wideRow .itemWide {
+    flex: 1 auto;
+    margin: 0px 5px;
+}
+
+#flashinfo {
+    width: auto;
+    border: 2px solid blue;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+#flashinfo h3 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #00c;
+    color: #ffffff;
+}
+
+#flashinfo ul li {
+    margin: 5px 5px 5px 0px;
+    font-size: 12px;
+    list-style: square;
+}
+
+
+#flashsuccess {
+    width: auto;
+    border: 2px solid green;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+#flashsuccess h3 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #0c0;
+}
+
+#flashsuccess ul li {
+    margin: 5px 5px 5px 0px;
+    font-size: 12px;
+    list-style: square;
+}
+
+#flasherror {
+    width: auto;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+#flasherror h3 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+}
+
+#flasherror ul li {
+    margin: 5px 5px 5px 0px;
+    font-size: 12px;
+    list-style: square;
+}
