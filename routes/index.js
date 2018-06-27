@@ -128,6 +128,6 @@ router.delete('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)',
     sessionController.loginRequired,
     quizController.adminOrAuthorRequired,
 
-    tipController.destroy);
+
 
 module.exports = router;
