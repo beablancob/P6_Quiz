@@ -62,40 +62,37 @@ exports.create = (req, res, next) => {
     });
 };
 
-// GET /tips/:tipId/edit. Pasamos el quiz por si acaso lo necesitamos
+// GET /tips/:tipId/edit
 exports.edit = (req, res, next) => {
 
-    const {tip, quiz} = req;
+    const {tip,quiz} = req;
 
-    res.render('tips/edit', {tip, quiz});
+    res.render('tips/edit', {tip,quiz}); //Por si acaso pasamos el quiz porque es posible que lo necesitemos para editar el tip
 };
-
 
 // PUT /tips/:tipId
 exports.update = (req, res, next) => {
 
-    const {tip, quiz, body} = req;
+    const {quiz,tip, body} = req;
 
-    tip.text = body.text;
-    tip.accepted =false;
+    tip.text = body.text; //Porque en el nombre del formulario he puesto que sea text
 
 
-    tip.save({fields: ["text", "accepted"]})
-        .then(quiz => {
+    tip.save({fields: ["text","accepted"]})
+        .then(tip => {
             req.flash('success', 'Tip edited successfully.');
             res.redirect('/goback');
         })
         .catch(Sequelize.ValidationError, error => {
             req.flash('error', 'There are errors in the form:');
             error.errors.forEach(({message}) => req.flash('error', message));
-            res.render('tip/edit', {tip, quiz});
+            res.render('tip/edit', {tip,quiz});
         })
         .catch(error => {
-            req.flash('error', 'Error editing the Quiz: ' + error.message);
+            req.flash('error', 'Error editing the Tip: ' + error.message);
             next(error);
         });
 };
-
 
 
 // GET /quizzes/:quizId/tips/:tipId/accept
