@@ -129,6 +129,10 @@ router.put('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)',
 
 
 
+router.get('/quizzes/randomcheck/:quizId(\\d+)',  quizController.randomCheck);
+router.get('/quizzes/randomplay',  quizController.randomPlay);
+
+
 router.post('/quizzes/:quizId(\\d+)/tips',
     sessionController.loginRequired,
     tipController.create);
