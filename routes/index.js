@@ -122,11 +122,11 @@ router.post('/quizzes/:quizId(\\d+)/tips',
     tipController.create);
 router.put('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)/accept',
     sessionController.loginRequired,
-    quizController.adminOrAuthorRequired,
+   // quizController.adminOrAuthorRequired,
     tipController.accept);
 router.delete('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)',
     sessionController.loginRequired,
-    quizController.adminOrAuthorRequired,
+   // quizController.adminOrAuthorRequired,
     tipController.destroy);
 
 

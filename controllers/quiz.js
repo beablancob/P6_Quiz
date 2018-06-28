@@ -26,6 +26,8 @@ exports.load = (req, res, next, quizId) => {
 };
 
 
+
+
 // GET /quizzes
 exports.index = (req, res, next) => {
 
